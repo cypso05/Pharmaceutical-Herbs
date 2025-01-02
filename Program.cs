@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "Pharmaceutical Herbs API",
         Version = "v1",
-        Description = "A RESTful API for for herbs. Search for a Herb and check the pharmaceutical data. This data is from European Medicines Agency",
+        Description = "A RESTful API for herbs. Search for a Herb and check the pharmaceutical data. This data is from the European Medicines Agency",
         Contact = new OpenApiContact
         {
             Name = "Designed By Cyprain Chidozie",
@@ -31,6 +31,9 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+// Ensure the app listens on the correct port set by Render
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -49,5 +52,5 @@ app.UseRouting();
 // Map controllers to endpoints
 app.MapControllers();
 
-// Run the application
-app.Run();
+// Run the application on the specified port
+app.Run($"http://0.0.0.0:{port}");
