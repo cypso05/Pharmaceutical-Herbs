@@ -34,8 +34,6 @@ builder.Services.AddSwaggerGen(c =>
     // c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "PharmaceuticalHerbs.xml"));
 });
 
-var app = builder.Build();
-
 // Enable CORS for testing (you can tighten the policy later)
 builder.Services.AddCors(options =>
 {
@@ -44,6 +42,8 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); // Allow all origins for testing
     });
 });
+
+var app = builder.Build();
 
 // Enable routing and apply CORS policy
 app.UseRouting();
