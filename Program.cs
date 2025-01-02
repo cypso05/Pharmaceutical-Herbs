@@ -24,7 +24,7 @@ builder.Services.AddSwaggerGen(c =>
         Description = "A RESTful API for herbs. Search for a Herb and check the pharmaceutical data. This data is from the European Medicines Agency.",
         Contact = new OpenApiContact
         {
-            Name = "Designed By Cyprain Chidozie",
+            Name = "Admin: Cyprain Chidozie",
             Email = "Cyprainchidozie232@gmail.com",
             Url = new Uri("https://cypso05.github.io/softwaredev/") // Contact URL for more info
         }
