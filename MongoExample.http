@@ -1,0 +1,25 @@
+PUT http://localhost:5191/api/pharmaguide/6776a8a2a01b5102a6aea7f0
+Content-Type: application/json
+Accept: application/json
+
+{
+  "drugId": "6776a8a2a01b5102a6aea7f0",
+  "status": "F: Assessment finalised 2",
+  "herb_Latin_Name": "Rosmarinus officinalis",
+  "botanical_Name": "Salvia rosmarinus",
+  "english_common_name": "Rosemary",
+  "combination": "no",
+  "use": "Digestive and circulatory disorders",
+  "outcome": "Updated European Union herbal monograph",
+  "date_added_to_the_inventory": "2024-01-01T00:00:00Z",
+  "date_added_to_the_priority_list": "2024-01-02T00:00:00Z",
+  "first_published": "2024-01-03T00:00:00Z",
+  "revision_date": "2024-02-01T00:00:00Z",
+  "more_Information": "https://www.example.com/herbal/rosemary-updated2"
+}
+
+// you can update one or more fields without modifying the entire document. When constructing the updateDefinition in the MongoDB service, you only include the fields you want to update. The other fields remain unchanged. Use the sample request below to delete any document using the _id field at the end of the URL. as seen below with object with _id: 677673180338a6d0a81fc138
+
+//DELETE http://localhost:5191/api/pharmaguide/677673180338a6d0a81fc138
+//Accept: application/json
+
